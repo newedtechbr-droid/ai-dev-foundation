@@ -173,7 +173,7 @@ p+p{margin-top:16px}
 @media(min-width:900px){.produto .box img{width:340px}}
 .produto h2{max-width:none;margin-bottom:12px}
 
-.modulos{display:grid;gap:16px;margin-top:40px}
+.modulos{display:grid;gap:16px;margin-top:40px;align-items:start}
 @media(min-width:820px){.modulos{grid-template-columns:1fr 1fr}}
 .mod{border:1.5px solid var(--linha);border-radius:var(--raio);padding:24px;display:flex;gap:18px;transition:border-color .2s ease,transform .2s ease}
 .mod:hover{border-color:var(--amarelo);transform:translateY(-2px)}
@@ -181,6 +181,13 @@ p+p{margin-top:16px}
 .mod h3{margin:4px 0 8px}
 .mod p{color:var(--cinza-texto);font-size:16px;line-height:26px}
 .mod .ico{color:var(--grafite)}
+.aulas{margin-top:12px}
+.aulas summary{cursor:pointer;font-weight:700;font-size:15px;line-height:22px;text-decoration:underline;text-underline-offset:3px;list-style:none}
+.aulas summary::-webkit-details-marker{display:none}
+.aulas summary::after{content:" +"}
+.aulas[open] summary::after{content:" −"}
+.aulas ol{margin:12px 0 0 18px;display:grid;gap:6px;font-size:15px;line-height:22px;color:var(--cinza-texto)}
+.breve{display:inline-block;background:var(--creme);border:1px solid #D9D2BA;border-radius:6px;padding:0 6px;font-size:12px;font-weight:700;color:var(--grafite);white-space:nowrap}
 .extras{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:24px}
 .extras li{background:var(--creme);border-radius:999px;padding:8px 16px;font-size:16px;line-height:24px;font-weight:600}
 .extras .extras-rot{background:none;padding:8px 4px 8px 0;font-weight:700}
@@ -449,42 +456,58 @@ footer p+p{margin-top:8px}
     <div class="modulos">
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="12" r="7"/><polyline points="7,36 7,27 33,27 33,36"/><polyline points="15,21 20,25 25,21"/></svg>
-        <div><p class="idx">Módulo 1</p><h3>Desenvolvimento pessoal</h3><p>Para gerir um coliving de sucesso.</p></div>
+        <div><p class="idx">Módulo 1</p><h3>Desenvolvimento pessoal</h3><p>Para gerir um coliving de sucesso.</p>
+          <details class="aulas"><summary>Ver aulas (5 aulas)</summary><ol><li>Perfis comportamentais: o seu e o dos seus moradores</li><li>Mentalidade de sucesso: como a autogestão transforma seu coliving</li><li>Produtividade no coliving: gestão do tempo e performance</li><li>Comunicação para conectar</li><li>Mediação e harmonia: como gerenciar conflitos na comunidade</li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><polyline points="4,19 20,6 36,19"/><polyline points="9,15 9,34 31,34 31,15"/><rect x="17" y="24" width="6" height="10"/></svg>
-        <div><p class="idx">Módulo 2</p><h3>Construção e planejamento</h3><p>Estruturando o seu negócio.</p></div>
+        <div><p class="idx">Módulo 2</p><h3>Construção e planejamento</h3><p>Estruturando o seu negócio.</p>
+          <details class="aulas"><summary>Ver aulas (7 aulas)</summary><ol><li>Diagnóstico do seu espaço: mapa de autoavaliação do negócio</li><li>Analisando o mercado: quem são seus concorrentes?</li><li>Público ideal: construção da persona do seu coliving</li><li>Cultura do coliving: criando uma identidade única</li><li>Análise SWOT: forças, fraquezas, oportunidades e ameaças</li><li>Proposta de valor: o que faz seu coliving ser diferente?</li><li>Tipologias de coliving: como escolher o modelo ideal para o seu público</li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><polyline points="6,16 14,16 30,7 30,33 14,24 6,24 6,16"/><polyline points="12,24 15,34 20,34 18,25"/><line x1="34" y1="16" x2="34" y2="24"/></svg>
-        <div><p class="idx">Módulo 3</p><h3>Marketing e atração</h3><p>Como lotar o seu coliving com as pessoas certas.</p></div>
+        <div><p class="idx">Módulo 3</p><h3>Marketing e atração</h3><p>Como lotar o seu coliving com as pessoas certas.</p>
+          <details class="aulas"><summary>Ver aulas (13 aulas + 1 em breve)</summary><ol><li>Introdução ao marketing digital: presença online estratégica</li><li>A jornada do hóspede: do interesse à fidelização</li><li>Funil de vendas: da primeira mensagem ao fechamento de contrato</li><li>Redes sociais para coliving: onde e como marcar presença</li><li>Instagram estratégico</li><li>Como fazer a bio no Instagram (live com Marcela)</li><li>Facebook estratégico</li><li>WhatsApp</li><li>Inteligência artificial</li><li>PDF de ferramentas digitais</li><li>Divulgação estratégica: os melhores canais de vendas</li><li>Processo de seleção: formulários, filtros e estratégias</li><li>Marca</li><li>Oferta irresistível: como criar um coliving que se vende sozinho <span class="breve">Em breve</span></li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><line x1="5" y1="34" x2="35" y2="34"/><polyline points="7,27 16,17 22,23 33,9"/><polyline points="25,9 33,9 33,17"/></svg>
-        <div><p class="idx">Módulo 4</p><h3>Rentabilidade e escala</h3><p>Estratégias para maximizar os seus lucros.</p></div>
+        <div><p class="idx">Módulo 4</p><h3>Rentabilidade e escala</h3><p>Estratégias para maximizar os seus lucros.</p>
+          <details class="aulas"><summary>Ver aulas (5 aulas)</summary><ol><li>Fluxo financeiro no coliving: gestão de pagamentos e recebimentos</li><li>Quanto cobrar? Calculadora de precificação de quartos</li><li>Precificação inteligente: estratégias para ajustes de valor</li><li>Investindo com estratégia: cálculo inteligente de reformas</li><li>Além do aluguel: como monetizar seu coliving com outras receitas</li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="7" width="32" height="26"/><line x1="15" y1="7" x2="15" y2="25"/><line x1="25" y1="7" x2="25" y2="25"/><line x1="4" y1="25" x2="36" y2="25"/><line x1="20" y1="25" x2="20" y2="33"/></svg>
-        <div><p class="idx">Módulo 5</p><h3>Modelo de negócio na prática</h3><p>O Business Model Canvas aplicado ao seu coliving.</p></div>
+        <div><p class="idx">Módulo 5</p><h3>Modelo de negócio na prática</h3><p>O Business Model Canvas aplicado ao seu coliving.</p>
+          <details class="aulas"><summary>Ver aulas (1 aula)</summary><ol><li>Business Model Canvas</li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="7" width="30" height="28"/><line x1="5" y1="15" x2="35" y2="15"/><line x1="13" y1="3" x2="13" y2="10"/><line x1="27" y1="3" x2="27" y2="10"/><polyline points="13,25 18,30 27,20"/></svg>
-        <div><p class="idx">Módulo 6</p><h3>Gestão e operação</h3><p>Rotina e administração sem dor de cabeça.</p></div>
+        <div><p class="idx">Módulo 6</p><h3>Gestão e operação</h3><p>Rotina e administração sem dor de cabeça.</p>
+          <details class="aulas"><summary>Ver aulas (3 aulas)</summary><ol><li>A arte de receber: como criar a melhor experiência de chegada</li><li>Harmonia e gestão: espaços compartilhados e comunidade</li><li>Morar no próprio coliving: como conciliar privacidade e gestão</li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><polyline points="9,4 25,4 32,11 32,36 9,36 9,4"/><polyline points="25,4 25,11 32,11"/><line x1="14" y1="19" x2="27" y2="19"/><line x1="14" y1="25" x2="27" y2="25"/><line x1="14" y1="31" x2="21" y2="31"/></svg>
-        <div><p class="idx">Módulo 7</p><h3>Segurança jurídica</h3><p>Formalização e aspectos legais.</p></div>
+        <div><p class="idx">Módulo 7</p><h3>Segurança jurídica</h3><p>Formalização e aspectos legais.</p>
+          <details class="aulas"><summary>Ver aulas (2 aulas + 1 em breve)</summary><ol><li>Aspectos legais do coliving com André Tavares (live gravada)</li><li>Contabilidade do coliving com Luiz Carlos Júnior (live gravada)</li><li>Contratos e acordos de convivência: protegendo seu negócio <span class="breve">Em breve</span></li></ol></details>
+        </div>
       </article>
       <article class="mod rv">
         <svg class="ico" viewBox="0 0 40 40" aria-hidden="true"><polyline points="2,22 11,14 20,22"/><polyline points="5,20 5,34 17,34 17,20"/><polyline points="18,16 28,7 38,16"/><polyline points="21,14 21,34 35,34 35,14"/></svg>
-        <div><p class="idx">Módulo 8</p><h3>Administrador de coliving</h3><p>Como gerir múltiplos imóveis.</p></div>
+        <div><p class="idx">Módulo 8</p><h3>Administrador de coliving</h3><p>Como gerir múltiplos imóveis.</p>
+          <details class="aulas"><summary>Ver aulas (4 aulas + 3 em breve)</summary><ol><li>Multifuncionalidade: as principais áreas de atuação do administrador</li><li>Liderança no coliving: a postura essencial de um gestor de comunidade</li><li>Ganhos no coliving: como funciona a remuneração do administrador</li><li>Oferta irresistível: como empacotar e vender seu serviço de administração</li><li>Contratos essenciais para administrar colivings <span class="breve">Em breve</span></li><li>Como gerir múltiplos imóveis <span class="breve">Em breve</span></li><li>Sublocação estratégica: como alugar e rentabilizar um imóvel no modelo coliving <span class="breve">Em breve</span></li></ol></details>
+        </div>
       </article>
     </div>
     <ul class="extras" aria-label="E ainda">
       <li class="extras-rot">E ainda:</li>
       <li>Boas-vindas</li>
-      <li>Diagnóstico final</li>
-      <li>Aulas tira-dúvidas</li>
+      <li>Diagnóstico final: a roda</li>
+      <li>5 aulas tira-dúvidas gravadas</li>
     </ul>
     <div class="cta-centro"><a class="btn" href="#planos" data-cta="modulos">Quero transformar minha casa em coliving</a></div>
   </div>
@@ -638,12 +661,12 @@ footer p+p{margin-top:8px}
     <div class="faq">
       <details><summary>Funciona para a minha cidade?</summary><div class="r">Sim. O curso é online e o método vale para qualquer cidade: capital, cidade do interior, cidade universitária, destino turístico ou região de natureza. Em cada lugar o público muda, e você aprende a escolher o seu e a criar demanda com posicionamento e divulgação.</div></details>
       <details><summary>Quem mora em coliving?</summary><div class="r">Pessoas que valorizam praticidade, flexibilidade e comunidade: quem está começando a vida em uma nova cidade, jovens profissionais, pessoas em transição, trabalhadores remotos, mulheres que buscam um espaço seguro, quem procura uma rotina wellness e quem não quer morar sozinho. Em geral, um público consciente e cuidadoso.</div></details>
-      <details><summary>E se estragarem a minha casa?</summary><div class="r">Esse é o medo número 1, e o curso trata dele de frente: seleção com formulário e entrevista, manual de conduta, contrato bem amarrado e faxina regular. No coliving você acompanha quando quiser. No aluguel tradicional, só descobre o estado dela quando o inquilino sai.</div></details>
+      <details><summary>E se estragarem a minha casa?</summary><div class="r">Esse é o medo número 1, e o curso trata dele de frente: seleção com formulário e filtros, cultura e regras claras de convivência e uma boa experiência de chegada. No coliving você acompanha quando quiser. No aluguel tradicional, só descobre o estado dela quando o inquilino sai.</div></details>
       <details><summary>Dá muito trabalho administrar?</summary><div class="r">Dá mais trabalho que o aluguel tradicional, principalmente no começo. Com escalas, combinados e um grupo da casa, a rotina fica organizada e previsível. E você também pode delegar a gestão.</div></details>
       <details><summary>Coliving não é só uma república cara?</summary><div class="r">Não. A república não tem seleção, regras nem estrutura. O coliving entrega casa mobiliada, contas inclusas, limpeza, manutenção e uma comunidade escolhida. É esse pacote que permite cobrar mais por quarto.</div></details>
-      <details><summary>Isso é legal? Posso fazer em condomínio?</summary><div class="r">Sim, com formalização. O curso mostra como a gente faz (CNPJ, CNAE e contrato com assessoria jurídica) e o que você precisa checar na convenção do condomínio e nas regras do seu município. Cada caso deve ser confirmado com um contador ou advogado.</div></details>
+      <details><summary>Isso é legal? Posso fazer em condomínio?</summary><div class="r">Sim, com formalização. O módulo de segurança jurídica traz aulas com um advogado e um contador sobre os aspectos legais e a contabilidade do coliving. Cada caso deve ser confirmado com um contador ou advogado, inclusive as regras do seu condomínio e do seu município.</div></details>
       <details><summary>Preciso reformar a casa ou ter só suítes?</summary><div class="r">Não. O investimento depende do estado da casa, e o curso ensina a definir o público antes de gastar com reforma ou mobília.</div></details>
-      <details><summary>E se um morador der problema?</summary><div class="r">Você aprende o passo a passo: conversa, avaliação com os outros moradores e advertência. Como os contratos são curtos, se não houver ajuste, a troca é rápida.</div></details>
+      <details><summary>E se um morador der problema?</summary><div class="r">O curso tem uma aula só sobre mediação e gestão de conflitos na comunidade. E, como os contratos de coliving são curtos, se não houver ajuste, a troca é rápida.</div></details>
       <details><summary>Nunca fiz nada parecido. Consigo acompanhar?</summary><div class="r">Sim. O curso foi pensado para donos de casa, não para especialistas. As aulas são diretas, práticas e você assiste no seu ritmo.</div></details>
       <details><summary>Como recebo o acesso?</summary><div class="r">Logo após a confirmação do pagamento, você recebe o acesso no e-mail que usou no momento da compra.</div></details>
     </div>
