@@ -84,14 +84,16 @@ p+p{margin-top:16px}
 .check-list .bola svg{width:14px;height:14px;margin:0}
 .hero .btn{width:100%}
 @media(min-width:560px){.hero .btn{width:auto}}
-.hero-visual{position:relative;width:100%;max-width:600px;margin:0 auto;aspect-ratio:1/1.08}
+.hero-visual{position:relative;width:100%;max-width:600px;margin:0 auto;aspect-ratio:1/1.02;overflow:hidden;border-radius:0 0 20px 20px}
 .casa{position:absolute;left:0;right:0;top:0;bottom:0;background:var(--amarelo);clip-path:polygon(50% 0,100% 28%,100% 100%,0 100%,0 28%)}
-.foto{position:absolute;margin:0;border-radius:20px;overflow:hidden;border:6px solid #fff;background:#fff;box-shadow:0 20px 44px rgba(28,28,28,.22)}
-.foto img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.foto.f1{left:5%;top:30%;width:46%;z-index:1}
-.foto.f2{right:5%;top:38%;width:46%;z-index:2}
-.foto figcaption{position:absolute;left:8px;bottom:8px;background:var(--grafite);color:#fff;border-radius:8px;padding:4px 10px;font-size:12px;line-height:16px}
-.foto figcaption b{display:block;font-size:15px;line-height:20px}
+.gente{position:absolute;bottom:0;margin:0;height:84%}
+.gente img{height:100%;width:auto;display:block;filter:drop-shadow(0 14px 22px rgba(28,28,28,.28))}
+.gente.g1{left:3%;z-index:2}
+.gente.g2{right:3%;z-index:1;height:80%}
+.gente figcaption{position:absolute;bottom:14px;background:var(--grafite);color:#fff;border-radius:8px;padding:5px 12px;font-size:13px;line-height:17px;z-index:3;white-space:nowrap}
+.gente.g1 figcaption{left:8%}
+.gente.g2 figcaption{right:8%}
+.gente figcaption b{display:block;font-size:16px;line-height:21px}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .duo figure{position:relative;border-radius:16px;overflow:hidden;background:#fff}
 .duo figure:nth-child(2){transform:translateY(28px)}
@@ -312,12 +314,12 @@ footer p+p{margin-top:8px}
     </div>
     <div class="hero-visual" aria-label="Paola e Ivonne, criadoras do Viver de Coliving">
       <div class="casa" aria-hidden="true"></div>
-      <figure class="foto f1">
-        <picture><source srcset="/assets/paola.webp" type="image/webp"><img src="/assets/paola.jpg" alt="Paola, criadora do Viver de Coliving" width="800" height="1000" fetchpriority="high"></picture>
+      <figure class="gente g1">
+        <img src="/assets/paola-recorte.webp" alt="Paola, criadora do Viver de Coliving" width="531" height="900" fetchpriority="high">
         <figcaption><b>Paola</b>Gestão</figcaption>
       </figure>
-      <figure class="foto f2">
-        <picture><source srcset="/assets/ivonne.webp" type="image/webp"><img src="/assets/ivonne.jpg" alt="Ivonne, criadora do Viver de Coliving" width="800" height="1000"></picture>
+      <figure class="gente g2">
+        <img src="/assets/ivonne-recorte.webp" alt="Ivonne, criadora do Viver de Coliving" width="475" height="900">
         <figcaption><b>Ivonne</b>Marketing</figcaption>
       </figure>
     </div>
