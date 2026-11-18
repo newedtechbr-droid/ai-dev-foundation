@@ -7,6 +7,10 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "none"
   },
+  "routes": [
+    { "pattern": "viverdecoliving.com.br", "custom_domain": true },
+    { "pattern": "www.viverdecoliving.com.br", "custom_domain": true }
+  ],
   "workers_dev": true,
   "preview_urls": false
 }
