@@ -12,7 +12,7 @@
 <meta property="og:description" content="Curso Viver de Coliving: o passo a passo para transformar a sua casa em um coliving. 100% online, com garantia de 7 dias.">
 <meta property="og:url" content="https://viverdecoliving.com.br/">
 <meta property="og:site_name" content="Viver de Coliving">
-<meta property="og:image" content="https://viverdecoliving.com.br/assets/og-2.jpg">
+<meta property="og:image" content="https://viverdecoliving.com.br/assets/og-3.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Paola e Ivonne, criadoras do Viver de Coliving">
@@ -71,15 +71,15 @@ p+p{margin-top:16px}
 .ico{width:40px;height:40px;flex:none}
 .ico path,.ico polyline,.ico line,.ico circle,.ico rect{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:square;stroke-linejoin:miter}
 
-.topo{position:absolute;inset:0 0 auto 0;z-index:5;padding:20px 0}
+.topo{position:relative;z-index:5;padding:14px 0;background:var(--grafite)}
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topo img{width:200px}
-.topo a.link{font-size:16px;font-weight:700;text-decoration:none;display:none;border:2px solid var(--grafite);border-radius:10px;padding:10px 18px}
-.topo a.link:hover{background:var(--grafite);color:#fff}
-@media(min-width:720px){.topo img{width:260px}.topo a.link{display:inline-block}}
+.topo img{width:170px;height:auto}
+.topo a.link{font-size:16px;font-weight:700;text-decoration:none;display:none;border:2px solid var(--amarelo);color:#fff;border-radius:10px;padding:10px 18px}
+.topo a.link:hover{background:var(--amarelo);color:var(--grafite)}
+@media(min-width:720px){.topo img{width:220px}.topo a.link{display:inline-block}}
 
-.hero{padding:124px 0 64px;position:relative;overflow:hidden}
-@media(min-width:960px){.hero{padding:132px 0 96px}}
+.hero{padding:44px 0 64px;position:relative;overflow:hidden}
+@media(min-width:960px){.hero{padding:64px 0 96px}}
 .hero-grid{display:grid;gap:48px;align-items:center}
 @media(min-width:960px){.hero-grid{grid-template-columns:1fr 1fr;gap:48px}}
 .hero h1{margin-bottom:20px}
@@ -91,18 +91,15 @@ p+p{margin-top:16px}
 .check-list .bola svg{width:14px;height:14px;margin:0}
 .hero .btn{width:100%}
 @media(min-width:560px){.hero .btn{width:auto}}
-.hero-visual{position:relative;width:100%;max-width:640px;margin:0 auto;aspect-ratio:1/1.02;overflow:hidden}
-.casa{position:absolute;inset:0;width:100%;height:100%}
-.casa polygon{fill:var(--creme);stroke:var(--grafite);stroke-width:4;stroke-linejoin:miter;vector-effect:non-scaling-stroke}
-.casa .telha{fill:none;stroke:var(--amarelo);stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;vector-effect:non-scaling-stroke}
-.gente{position:absolute;bottom:0;margin:0;height:86%}
-.gente img{height:100%;width:auto;display:block}
-.gente.g1{left:-4%;z-index:2}
-.gente.g2{right:-1%;z-index:1;height:76%}
-.gente figcaption{position:absolute;bottom:14px;background:var(--grafite);color:#fff;border-radius:8px;padding:5px 12px;font-size:13px;line-height:17px;z-index:3;white-space:nowrap}
-.gente.g1 figcaption{left:18%}
-.gente.g2 figcaption{right:14%}
-.gente figcaption b{display:block;font-size:16px;line-height:21px}
+.hero-visual{position:relative;width:100%;max-width:640px;margin:0 auto;aspect-ratio:1200/1100}
+.dupla{position:absolute;inset:0;margin:0;background:#EFEDE8;clip-path:polygon(50% 0,100% 26%,100% 100%,0 100%,0 26%)}
+.dupla img{position:absolute;left:0;bottom:0;width:100%;height:auto}
+.telhado{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.telhado polyline{fill:none;stroke:var(--amarelo);stroke-width:10;stroke-linecap:square;stroke-linejoin:miter;vector-effect:non-scaling-stroke}
+.nome{position:absolute;bottom:14px;background:var(--grafite);color:#fff;border-radius:8px;padding:5px 12px;font-size:13px;line-height:17px;white-space:nowrap}
+.nome b{display:block;font-size:16px;line-height:21px}
+.nome.n1{left:5%}
+.nome.n2{right:5%}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .duo figure{position:relative;border-radius:16px;overflow:hidden;background:#fff}
 .duo figure:nth-child(2){transform:translateY(28px)}
@@ -175,11 +172,14 @@ p+p{margin-top:16px}
 .punch{margin-top:28px;font-size:20px;line-height:30px;font-weight:700}
 
 .produto{text-align:left}
-.produto .box{background:var(--branco);border-radius:24px;padding:36px 24px;display:grid;gap:32px;align-items:center}
+.produto .box{background:var(--grafite);color:#fff;border-radius:24px;padding:36px 24px;display:grid;gap:32px;align-items:center}
 @media(min-width:900px){.produto .box{grid-template-columns:auto 1fr;padding:56px;gap:56px}}
 .produto .box img{width:260px}
 @media(min-width:900px){.produto .box img{width:340px}}
 .produto h2{max-width:none;margin-bottom:12px}
+.produto .box .eyebrow{color:var(--amarelo)}
+.produto .box .lead{color:#F2F2F2}
+.produto .box img{height:auto}
 
 .modulos{display:grid;gap:16px;margin-top:40px;align-items:start}
 @media(min-width:820px){.modulos{grid-template-columns:1fr 1fr}}
@@ -284,7 +284,7 @@ p+p{margin-top:16px}
 
 footer{background:var(--grafite);color:#E6E6E6;padding:56px 0 120px;font-size:15px;line-height:22px}
 @media(min-width:720px){footer{padding-bottom:56px}}
-footer img{width:200px;margin-bottom:24px}
+footer img{width:220px;height:auto;margin-bottom:24px}
 footer p+p{margin-top:8px}
 
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.97);border-top:1px solid var(--linha);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:12px;align-items:center;transform:translateY(110%);transition:transform .25s ease;backdrop-filter:blur(6px)}
@@ -310,7 +310,7 @@ footer p+p{margin-top:8px}
 
 <header class="topo">
   <div class="wrap">
-    <img src="/assets/logo-principal.svg" alt="Viver de Coliving" width="200" height="50">
+    <img src="/assets/logo-oficial.png" alt="Viver de Coliving" width="220" height="59">
     <a class="link" href="#planos">Ver planos e valores</a>
   </div>
 </header>
@@ -332,15 +332,12 @@ footer p+p{margin-top:8px}
       <p class="micro">Acesso imediato · Assista no seu ritmo · Garantia de 7 dias</p>
     </div>
     <div class="hero-visual" aria-label="Paola e Ivonne, criadoras do Viver de Coliving">
-      <svg class="casa" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="50,2 99.6,29 99.6,99.6 0.4,99.6 0.4,29"/><polyline class="telha" points="0.4,29 50,2 99.6,29"/></svg>
-      <figure class="gente g1">
-        <img src="/assets/paola-recorte.webp" alt="Paola, criadora do Viver de Coliving" width="576" height="900" fetchpriority="high">
-        <figcaption><b>Paola</b>Gestão</figcaption>
+      <figure class="dupla">
+        <picture><source srcset="/assets/dupla.webp" type="image/webp"><img src="/assets/dupla.jpg" alt="Paola e Ivonne, criadoras do Viver de Coliving" width="1200" height="960" fetchpriority="high"></picture>
       </figure>
-      <figure class="gente g2">
-        <img src="/assets/ivonne-recorte.webp" alt="Ivonne, criadora do Viver de Coliving" width="593" height="900">
-        <figcaption><b>Ivonne</b>Marketing</figcaption>
-      </figure>
+      <svg class="telhado" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,26 50,0 100,26"/></svg>
+      <span class="nome n1"><b>Paola</b>Gestão</span>
+      <span class="nome n2"><b>Ivonne</b>Marketing</span>
     </div>
   </div>
 </section>
@@ -446,7 +443,7 @@ footer p+p{margin-top:8px}
 <section class="amarelo produto">
   <div class="wrap">
     <div class="box rv">
-      <img src="/assets/logo-principal.svg" alt="Viver de Coliving" width="340" height="84">
+      <img src="/assets/logo-oficial.png" alt="Viver de Coliving" width="340" height="91">
       <div>
         <p class="eyebrow">Apresentamos</p>
         <h2>Curso Viver de Coliving</h2>
@@ -696,7 +693,7 @@ footer p+p{margin-top:8px}
 
 <footer>
   <div class="wrap">
-    <img src="/assets/logo-negativo.svg" alt="Viver de Coliving" width="200" height="50" loading="lazy">
+    <img src="/assets/logo-oficial.png" alt="Viver de Coliving" width="220" height="59" loading="lazy">
     <p>© <span id="ano">2026</span> Viver de Coliving. Todos os direitos reservados.</p>
     <p>Os resultados dependem da localização, do tamanho e do estado do imóvel e da gestão. Este site não garante ganhos.</p>
   </div>
