@@ -108,13 +108,27 @@ p+p{margin-top:16px}
 
 .dois-col{display:grid;gap:40px}
 @media(min-width:960px){.dois-col{grid-template-columns:1fr 1fr;gap:64px}}
-.apps{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-@media(min-width:560px){.apps{grid-template-columns:repeat(3,1fr)}}
-.app{border:2px solid var(--grafite);border-radius:12px;padding:14px 16px;font-size:16px;line-height:22px;font-weight:600;color:var(--grafite)}
-.tribos{display:grid;gap:12px;margin-top:24px}
-@media(min-width:560px){.tribos{grid-template-columns:1fr 1fr}}
-.tribo{background:var(--creme);border-radius:12px;padding:18px;font-size:16px;line-height:24px;color:var(--cinza-texto)}
-.tribo b{display:block;color:var(--grafite);margin-bottom:4px}
+.eco{margin-top:36px;display:grid;gap:10px}
+.eco-cab,.eco-row{display:grid;grid-template-columns:1fr;gap:6px 16px;align-items:center}
+.eco-cab{display:none}
+.eco-row{border:2px solid var(--grafite);border-radius:14px;padding:16px 18px;background:var(--branco)}
+.eco-row b{font-size:14px;line-height:20px;letter-spacing:.1em;text-transform:uppercase}
+.eco-row .antes{color:var(--cinza-texto);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--vermelho);font-size:17px;line-height:26px}
+.eco-row .agora{font-weight:700;font-size:18px;line-height:26px}
+.eco-row .seta{display:none}
+.eco-casa{background:var(--amarelo);border-color:var(--amarelo)}
+.eco-casa .antes{color:var(--grafite);text-decoration-color:var(--grafite)}
+.eco-casa .agora{font-size:22px}
+@media(min-width:820px){
+  .eco{gap:12px}
+  .eco-cab,.eco-row{grid-template-columns:180px 1fr 56px 1fr}
+  .eco-cab{display:grid;padding:0 20px;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  .eco-row{padding:18px 20px}
+  .eco-row .seta{display:block;height:3px;background:var(--grafite);position:relative}
+  .eco-row .seta::after{content:"";position:absolute;right:-2px;top:50%;width:12px;height:12px;border-top:3px solid var(--grafite);border-right:3px solid var(--grafite);transform:translateY(-50%) rotate(45deg)}
+}
+.eco-txt{margin-top:28px;display:grid;gap:16px;max-width:760px}
+.eco-txt p{font-size:18px;line-height:30px;margin:0}
 .destaque-txt{margin-top:24px;padding:18px 20px;background:var(--amarelo);border-radius:12px;color:var(--grafite);font-weight:600}
 
 .numeros{display:grid;gap:16px;margin-top:40px}
@@ -330,35 +344,21 @@ footer p+p{margin-top:8px}
 </section>
 
 <section>
-  <div class="wrap dois-col">
-    <div>
-      <p class="eyebrow">Economia colaborativa</p>
-      <h2 class="rv">O mundo já aprendeu a compartilhar. Agora é a vez da moradia.</h2>
-      <p class="lead">Pense em quantas coisas você usa hoje sem ser dono delas:</p>
-      <div class="apps">
-        <div class="app">Airbnb</div>
-        <div class="app">Uber</div>
-        <div class="app">BlaBlaCar</div>
-        <div class="app">Bike compartilhada</div>
-        <div class="app">Coworking</div>
-        <div class="app">Spotify e Netflix</div>
-      </div>
-      <p style="margin-top:28px">Isso é economia colaborativa: as pessoas preferem pagar pelo acesso e pela experiência do que carregar o peso da posse. E esse jeito de pensar chegou à moradia.</p>
-      <p>Cada vez mais gente quer chegar com a mala e encontrar tudo pronto: sem comprar móveis, sem fiador, sem contrato de 30 meses. <b>E aceita pagar mais por isso.</b></p>
-      <p class="destaque-txt">É aí que entra o coliving: uma casa mobiliada, com contas inclusas, onde cada morador tem o seu quarto e divide as áreas comuns com pessoas que pensam parecido.</p>
+  <div class="wrap">
+    <p class="eyebrow">Economia colaborativa</p>
+    <h2 class="rv">O mundo já aprendeu a compartilhar. Agora é a vez da moradia.</h2>
+    <p class="lead">As pessoas preferem pagar pelo acesso, não pela posse. Veja o que já mudou:</p>
+    <div class="eco" role="table" aria-label="Da posse ao acesso">
+      <div class="eco-cab" role="row"><span role="columnheader"></span><span role="columnheader">Antes: ter</span><span role="columnheader"></span><span role="columnheader">Agora: acessar</span></div>
+      <div class="eco-row rv" role="row"><b role="rowheader">Hospedagem</b><span class="antes" role="cell">Hotel</span><span class="seta" aria-hidden="true"></span><span class="agora" role="cell">Airbnb</span></div>
+      <div class="eco-row rv" role="row"><b role="rowheader">Transporte</b><span class="antes" role="cell">Carro na garagem</span><span class="seta" aria-hidden="true"></span><span class="agora" role="cell">Uber, BlaBlaCar e bike compartilhada</span></div>
+      <div class="eco-row rv" role="row"><b role="rowheader">Trabalho</b><span class="antes" role="cell">Sala alugada</span><span class="seta" aria-hidden="true"></span><span class="agora" role="cell">Coworking</span></div>
+      <div class="eco-row rv" role="row"><b role="rowheader">Entretenimento</b><span class="antes" role="cell">Discos e DVDs</span><span class="seta" aria-hidden="true"></span><span class="agora" role="cell">Spotify e Netflix</span></div>
+      <div class="eco-row eco-casa rv" role="row"><b role="rowheader">Moradia</b><span class="antes" role="cell">Casa montada e contrato longo</span><span class="seta" aria-hidden="true"></span><span class="agora" role="cell">Coliving</span></div>
     </div>
-    <div>
-      <h3 class="rv">Cada coliving tem a sua tribo</h3>
-      <p class="lead" style="margin-top:12px">O segredo de um coliving que lota não é ser para todo mundo. É ser perfeito para alguém. O dono da casa escolhe um público e cria uma experiência pensada para ele.</p>
-      <div class="tribos">
-        <div class="tribo rv"><b>Só para mulheres</b>Foco em segurança e acolhimento</div>
-        <div class="tribo rv"><b>Profissionais remotos</b>Coworking e internet de alta velocidade</div>
-        <div class="tribo rv"><b>Wellness</b>Calma, meditação, yoga e rotina saudável</div>
-        <div class="tribo rv"><b>Jovens</b>Saindo da casa dos pais ou começando numa nova cidade</div>
-        <div class="tribo rv"><b>Pessoas em transição</b>Mudança de carreira, separação, recomeço</div>
-        <div class="tribo rv"><b>Mais de 50</b>Para quem não quer morar sozinho</div>
-      </div>
-      <p style="margin-top:24px;font-weight:500">Casa com identidade clara atrai as pessoas certas, e o morador fica mais tempo. Esse público existe em qualquer cidade.</p>
+    <div class="eco-txt">
+      <p>Cada vez mais gente quer chegar com a mala e encontrar tudo pronto. <b>E aceita pagar mais por isso.</b></p>
+      <p class="destaque-txt">Coliving: casa mobiliada, contas inclusas, quarto próprio e áreas comuns divididas.</p>
     </div>
   </div>
 </section>
