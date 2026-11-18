@@ -67,14 +67,15 @@ p+p{margin-top:16px}
 
 .topo{position:absolute;inset:0 0 auto 0;z-index:5;padding:20px 0}
 .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topo img{width:170px}
-.topo a.link{font-size:14px;font-weight:600;text-decoration:none;display:none}
-@media(min-width:720px){.topo img{width:200px}.topo a.link{display:inline-block}}
+.topo img{width:200px}
+.topo a.link{font-size:16px;font-weight:700;text-decoration:none;display:none;border:2px solid var(--grafite);border-radius:10px;padding:10px 18px}
+.topo a.link:hover{background:var(--grafite);color:#fff}
+@media(min-width:720px){.topo img{width:260px}.topo a.link{display:inline-block}}
 
-.hero{padding:112px 0 64px;position:relative;overflow:hidden}
+.hero{padding:124px 0 64px;position:relative;overflow:hidden}
 @media(min-width:960px){.hero{padding:132px 0 96px}}
 .hero-grid{display:grid;gap:48px;align-items:center}
-@media(min-width:960px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:56px}}
+@media(min-width:960px){.hero-grid{grid-template-columns:1fr 1fr;gap:48px}}
 .hero h1{margin-bottom:20px}
 .check-list{list-style:none;display:grid;gap:12px;margin:28px 0 32px}
 .check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
@@ -84,12 +85,12 @@ p+p{margin-top:16px}
 .check-list .bola svg{width:14px;height:14px;margin:0}
 .hero .btn{width:100%}
 @media(min-width:560px){.hero .btn{width:auto}}
-.hero-visual{position:relative;width:100%;max-width:600px;margin:0 auto;aspect-ratio:1/1.02;overflow:hidden;border-radius:0 0 20px 20px}
+.hero-visual{position:relative;width:100%;max-width:640px;margin:0 auto;aspect-ratio:1/1.02;overflow:hidden;border-radius:0 0 20px 20px}
 .casa{position:absolute;left:0;right:0;top:0;bottom:0;background:var(--amarelo);clip-path:polygon(50% 0,100% 28%,100% 100%,0 100%,0 28%)}
-.gente{position:absolute;bottom:0;margin:0;height:84%}
+.gente{position:absolute;bottom:0;margin:0;height:86%}
 .gente img{height:100%;width:auto;display:block;filter:drop-shadow(0 14px 22px rgba(28,28,28,.28))}
 .gente.g1{left:3%;z-index:2}
-.gente.g2{right:3%;z-index:1;height:80%}
+.gente.g2{right:3%;z-index:1;height:82%}
 .gente figcaption{position:absolute;bottom:14px;background:var(--grafite);color:#fff;border-radius:8px;padding:5px 12px;font-size:13px;line-height:17px;z-index:3;white-space:nowrap}
 .gente.g1 figcaption{left:8%}
 .gente.g2 figcaption{right:8%}
