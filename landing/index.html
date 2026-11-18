@@ -246,6 +246,8 @@ p+p{margin-top:16px}
 .mentoria{display:grid;gap:24px;align-items:center;border:1.5px solid var(--linha);border-radius:20px;padding:32px 24px}
 @media(min-width:900px){.mentoria{grid-template-columns:1fr auto;padding:44px 48px;gap:48px}}
 .mentoria h2{margin-bottom:12px}
+.mentoria-acao{display:grid;gap:12px;justify-items:stretch;min-width:280px}
+.mentoria-acao .preco{border:0;padding:0;margin:0}
 
 .faq{margin-top:40px;display:grid;gap:12px;max-width:860px}
 .faq details{background:var(--branco);border-radius:12px;overflow:hidden}
@@ -439,7 +441,7 @@ footer p+p{margin-top:8px}
 
 <section id="conteudo">
   <div class="wrap">
-    <p class="eyebrow">7 módulos</p>
+    <p class="eyebrow">Conteúdo do curso</p>
     <h2 class="rv">O que você vai aprender</h2>
     <div class="modulos">
       <article class="mod rv">
@@ -559,7 +561,7 @@ footer p+p{margin-top:8px}
         <h3>Curso Viver de Coliving</h3>
         <p class="desc">Para quem quer aprender o método e aplicar no seu ritmo, de forma independente.</p>
         <ul>
-          <li><svg class="mi ok" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-ok"/></svg>Curso gravado completo (7 módulos)</li>
+          <li><svg class="mi ok" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-ok"/></svg>Curso gravado completo (8 módulos)</li>
           <li><svg class="mi ok" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-ok"/></svg>Modelos e materiais de apoio</li>
           <li><svg class="mi ok" viewBox="0 0 20 20" aria-hidden="true"><use href="#i-ok"/></svg>Acesso por 1 ano para assistir quando e onde quiser</li>
         </ul>
@@ -606,9 +608,13 @@ footer p+p{margin-top:8px}
       <div>
         <p class="eyebrow">Próximo nível</p>
         <h2>Quer acompanhamento de perto?</h2>
-        <p class="lead">Além do curso gravado, oferecemos a mentoria individual, para olhar o seu imóvel e o seu caso com você. E, se o seu imóvel fica em Florianópolis, podemos fazer uma visita presencial para avaliar o potencial da casa.</p>
+        <p class="lead">Além do curso gravado, oferecemos a consultoria individual, para olhar o seu imóvel e o seu caso com você. E, se o seu imóvel fica em Florianópolis, podemos fazer uma visita presencial para avaliar o potencial da casa.</p>
       </div>
-      <a class="btn btn-escuro" href="#planos" data-whatsapp="mentoria">Quero saber da mentoria</a>
+      <div class="mentoria-acao">
+        <div class="preco"><small>CONSULTORIA INDIVIDUAL</small><strong><span>R$</span>4.000</strong></div>
+        <a class="btn btn-escuro" href="#planos" data-checkout="consultoria">Quero a consultoria</a>
+        <a class="btn btn-contorno" href="#planos" data-whatsapp="mentoria">Tirar dúvidas no WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
@@ -662,17 +668,10 @@ footer p+p{margin-top:8px}
 <script>
 (function(){
   var cfg = window.VIVER_CONFIG || {};
-  var params = new URLSearchParams(location.search);
-  function withTracking(url){
-    try{
-      var u = new URL(url);
-      params.forEach(function(v,k){ if(/^(utm_|src|sck|xcod|fbclid|gclid)/.test(k) && !u.searchParams.has(k)) u.searchParams.set(k,v); });
-      return u.toString();
-    }catch(e){ return url; }
-  }
+  var checkouts = { curso: cfg.checkoutCurso, comunidade: cfg.checkoutComunidade, consultoria: cfg.checkoutConsultoria };
   document.querySelectorAll('[data-checkout]').forEach(function(a){
-    var url = a.dataset.checkout === 'curso' ? cfg.checkoutCurso : cfg.checkoutComunidade;
-    if(url){ a.href = withTracking(url); a.rel = 'noopener'; }
+    var url = checkouts[a.dataset.checkout];
+    if(url){ a.href = url; a.rel = 'noopener'; }
   });
   var numero = String(cfg.whatsappNumero || '').replace(/\D/g,'');
   document.querySelectorAll('[data-whatsapp]').forEach(function(a){

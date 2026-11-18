@@ -8,9 +8,10 @@ Página de vendas estática (HTML + CSS + JS puro), pronta para o Cloudflare Pag
 | --- | --- |
 | `checkoutCurso` | Link de checkout do Plano 1 (R$ 597) |
 | `checkoutComunidade` | Link de checkout do Plano 2 (R$ 997) |
+| `checkoutConsultoria` | Link de checkout da consultoria individual (R$ 4.000) |
 | `whatsappNumero` | Número com DDI e DDD, só dígitos. Ex.: `5548999999999` |
 
-Enquanto os links estiverem vazios, os botões rolam até os planos. Parâmetros `utm_*`, `src`, `sck`, `fbclid` e `gclid` da URL são repassados automaticamente para o checkout.
+Enquanto os links estiverem vazios, os botões rolam até os planos. Os links de checkout são usados exatamente como estão, sem parâmetros extras.
 
 ## Publicar no Cloudflare Pages
 
