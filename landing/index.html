@@ -256,12 +256,7 @@ p+p{margin-top:16px}
 .deps{display:grid;gap:24px;margin-top:36px}
 @media(min-width:760px){.deps{grid-template-columns:repeat(3,1fr)}}
 .dep{margin:0;display:flex;flex-direction:column;gap:16px}
-.dep-video{position:relative;width:100%;aspect-ratio:9/16;max-height:620px;border:0;border-radius:16px;overflow:hidden;cursor:pointer;background-color:var(--grafite);background-size:cover;background-position:center;padding:0}
-.dep-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.dep-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .15s ease}
-.dep-video:hover .dep-play{transform:scale(1.08)}
-.dep-play svg{width:30px;height:30px;margin-left:4px}
-.dep-play polygon{fill:var(--grafite)}
+.dep-video{display:block;width:100%;aspect-ratio:9/16;max-height:620px;border-radius:16px;background:var(--grafite);object-fit:contain}
 .dep figcaption{font-size:17px;line-height:27px;color:var(--cinza-texto)}
 .dep figcaption b{display:block;color:var(--grafite);font-size:20px;line-height:28px;margin-bottom:4px}
 .garantia{display:grid;gap:28px;align-items:center}
@@ -649,21 +644,15 @@ footer p+p{margin-top:8px}
     <h2 class="rv">Quem já aplicou</h2>
     <div class="deps">
       <figure class="dep rv">
-        <button class="dep-video" type="button" data-yt="Mtn9wZ1zgf8" aria-label="Assistir depoimento: Eva Coliving" style="background-image:url(https://i.ytimg.com/vi/Mtn9wZ1zgf8/hqdefault.jpg)">
-          <span class="dep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></span>
-        </button>
+        <video class="dep-video" controls playsinline preload="none" poster="/videos/eva-coliving.jpg" aria-label="Assistir depoimento: Eva Coliving"><source src="/videos/eva-coliving.mp4" type="video/mp4"></video>
         <figcaption><b>Eva Coliving</b>Recuperou o investimento em 1 ano e hoje lucra R$ 9 mil por mês. A casa está sempre cheia e ainda tem lista de espera.</figcaption>
       </figure>
       <figure class="dep rv">
-        <button class="dep-video" type="button" data-yt="msfDdfiWZvY" aria-label="Assistir depoimento: Marlene" style="background-image:url(https://i.ytimg.com/vi/msfDdfiWZvY/hqdefault.jpg)">
-          <span class="dep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></span>
-        </button>
+        <video class="dep-video" controls playsinline preload="none" poster="/videos/marlene.jpg" aria-label="Assistir depoimento: Marlene"><source src="/videos/marlene.mp4" type="video/mp4"></video>
         <figcaption><b>Marlene</b>Não conhecia o modelo de coliving e agora implementou dentro do negócio dela.</figcaption>
       </figure>
       <figure class="dep rv">
-        <button class="dep-video" type="button" data-yt="t1R4QZxIZek" aria-label="Assistir depoimento: Imóvel valorizado" style="background-image:url(https://i.ytimg.com/vi/t1R4QZxIZek/hqdefault.jpg)">
-          <span class="dep-play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></span>
-        </button>
+        <video class="dep-video" controls playsinline preload="none" poster="/videos/imovel-valorizado.jpg" aria-label="Assistir depoimento: Imóvel valorizado"><source src="/videos/imovel-valorizado.mp4" type="video/mp4"></video>
         <figcaption><b>Imóvel valorizado</b>A casa valorizou para venda depois que o coliving foi implementado.</figcaption>
       </figure>
     </div>
@@ -758,16 +747,6 @@ footer p+p{margin-top:8px}
     var msg = a.dataset.whatsapp === 'mentoria' ? cfg.whatsappMensagemMentoria : cfg.whatsappMensagem;
     a.href = 'https://wa.me/' + numero + '?text=' + encodeURIComponent(msg || '');
     a.target = '_blank'; a.rel = 'noopener';
-  });
-  document.querySelectorAll('[data-yt]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1&playsinline=1&rel=0';
-      f.title = btn.getAttribute('aria-label');
-      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      f.allowFullscreen = true;
-      btn.innerHTML = ''; btn.style.cursor = 'default'; btn.appendChild(f);
-    }, { once: true });
   });
   document.getElementById('ano').textContent = new Date().getFullYear();
 
