@@ -680,7 +680,7 @@ footer p+p{margin-top:8px}
       </div>
       <div class="mentoria-acao">
         <p class="eyebrow" style="margin:0">Consultoria individual</p>
-        <a class="btn btn-escuro" href="#planos" data-checkout="consultoria">Quero a consultoria</a>
+        <a class="btn btn-escuro" href="#planos" data-checkout="consultoria" data-nova-aba>Fazer teste de viabilidade</a>
         <a class="btn btn-contorno" href="#planos" data-whatsapp="mentoria">Tirar dúvidas no WhatsApp</a>
       </div>
     </div>
@@ -739,7 +739,7 @@ footer p+p{margin-top:8px}
   var checkouts = { curso: cfg.checkoutCurso, comunidade: cfg.checkoutComunidade, consultoria: cfg.checkoutConsultoria };
   document.querySelectorAll('[data-checkout]').forEach(function(a){
     var url = checkouts[a.dataset.checkout];
-    if(url){ a.href = url; a.rel = 'noopener'; }
+    if(url){ a.href = url; a.rel = 'noopener'; if(a.hasAttribute('data-nova-aba')) a.target = '_blank'; }
   });
   var numero = String(cfg.whatsappNumero || '').replace(/\D/g,'');
   document.querySelectorAll('[data-whatsapp]').forEach(function(a){
